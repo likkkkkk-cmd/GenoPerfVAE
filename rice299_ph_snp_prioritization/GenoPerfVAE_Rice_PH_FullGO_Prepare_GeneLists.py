@@ -5,11 +5,11 @@
 Use these exact same lists in BOTH Full GO and Plant GO Slim analyses in agriGO v2.
 No neural model, SNP ranking, or data filtering is performed here.
 
-From E:\\VGMP\\Extended Comparison\\PerVAE:
+From E:\\VGMP\\Extended Comparison\\GenoPerfVAE:
   python GenoPerfVAE_Rice_PH_FullGO_Prepare_GeneLists.py
 
 Optionally:
-  python GenoPerfVAE_Rice_PH_FullGO_Prepare_GeneLists.py --root "D:\\path\\PerVAE"
+  python GenoPerfVAE_Rice_PH_FullGO_Prepare_GeneLists.py --root "D:\\path\\GenoPerfVAE"
 """
 from __future__ import annotations
 import argparse
@@ -19,7 +19,7 @@ import json
 import re
 from pathlib import Path
 
-DEFAULT_ROOT = Path(r"E:\VGMP\Extended Comparison\PerVAE")
+DEFAULT_ROOT = Path(r"E:\VGMP\Extended Comparison\GenoPerfVAE")
 PREVIOUS = "GenoPerfVAE_Rice_PH_GO_Enrichment"
 ID_PATTERN = re.compile(r"LOC_Os(?:0[1-9]|1[0-2])g\d{5}$")
 
