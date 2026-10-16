@@ -1,0 +1,18 @@
+# Inferred from the supplied GenoPerfVAE, Performer and selected baseline code.
+# No exact version lock has been validated against the original experiments.
+# Install a CPU/CUDA-compatible PyTorch build as appropriate for your system.
+
+numpy
+pandas
+scipy
+scikit-learn
+torch
+performer-pytorch
+tqdm
+matplotlib
+
+# Used by the Rice299-PH GradientSHAP comparison script (Section 3.7).
+captum
+
+# Used by some analysis/reporting helpers when writing Excel files.
+openpyxl
