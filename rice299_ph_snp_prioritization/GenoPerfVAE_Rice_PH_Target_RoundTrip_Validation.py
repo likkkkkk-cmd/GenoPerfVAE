@@ -720,7 +720,7 @@ def resolve_checkpoint(
         / CHECKPOINT_BASENAME,
 
         Path(
-            r"E:\VGMP\Extended Comparison\PerVAE"
+            r"E:\VGMP\Extended Comparison\GenoPerfVAE"
         )
         / "results_Rice_PH_Final_PostHoc"
         / CHECKPOINT_BASENAME,
