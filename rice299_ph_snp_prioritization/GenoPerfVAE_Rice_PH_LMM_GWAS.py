@@ -59,9 +59,9 @@ import matplotlib.pyplot as plt
 
 GENO_DEFAULT = Path(r"E:\VGMP\Extended Comparison\data\MET_crfilt_.90_outliers_removed_for_RRBlup_line_corrected.csv")
 PHENO_DEFAULT = Path(r"E:\VGMP\Extended Comparison\data\rice299_PH.csv")
-CKPT_DEFAULT = Path(r"E:\VGMP\Extended Comparison\PerVAE\results_Rice_PH_Final_PostHoc\GenoPerfVAE_Rice_PH_Final_PostHoc.pth")
-PERT_DIR_DEFAULT = Path(r"E:\VGMP\Extended Comparison\PerVAE\results_Rice_PH_ObservedGenotype_SNP_Perturbation_All299")
-OUT_DEFAULT = Path(r"E:\VGMP\Extended Comparison\PerVAE\results_Rice_PH_LMM_GWAS")
+CKPT_DEFAULT = Path(r"E:\VGMP\Extended Comparison\GenoPerfVAE\results_Rice_PH_Final_PostHoc\GenoPerfVAE_Rice_PH_Final_PostHoc.pth")
+PERT_DIR_DEFAULT = Path(r"E:\VGMP\Extended Comparison\GenoPerfVAE\results_Rice_PH_ObservedGenotype_SNP_Perturbation_All299")
+OUT_DEFAULT = Path(r"E:\VGMP\Extended Comparison\GenoPerfVAE\results_Rice_PH_LMM_GWAS")
 PREFIX = "GenoPerfVAE_Rice_PH_LMM_GWAS"
 
 
