@@ -179,7 +179,7 @@ This covers **perturb → coordinate audit → GO**; it does **not** run model f
 ### Step 6 — GradientSHAP comparison
 
 ```bat
-python GenoPerfVAE_Rice_PH_GradientSHAP_Comparison.py --project-dir "E:\VGMP\Extended Comparison\PerVAE" --stage all --device cuda --top-k 150 --baseline-size 32 --n-samples 16 --seeds 42,43,44
+python GenoPerfVAE_Rice_PH_GradientSHAP_Comparison.py --project-dir "E:\VGMP\Extended Comparison\GenoPerfVAE" --stage all --device cuda --top-k 150 --baseline-size 32 --n-samples 16 --seeds 42,43,44
 ```
 
 This script requires the final checkpoint, prior Top150 exact perturbations, and the existing PC10 GWAS output. It compares alternative SNP rankings under the **same fitted predictor**, not independent biological validation.
