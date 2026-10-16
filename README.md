@@ -4,7 +4,7 @@
 
 GenoPerfVAE is a variational neural model for predicting quantitative crop phenotypes from genome-wide SNP inputs. This repository contains the main prediction benchmark, implementations/adaptations of comparison models, and a Rice299 plant-height workflow for exploratory SNP prioritization.
 
-The main model combines a chunked Performer branch with a dense shortcut branch. Each branch estimates posterior parameters for its allocated latent dimensions; these parameters are concatenated into a shared variational representation used for phenotype prediction and genotype reconstruction. Training combines phenotype-prediction loss, reconstruction loss, and KL regularization.
+The main model combines a chunked Performer branch with a dense shortcut branch. Each branch estimates posterior parameters for its allocated latent dimensions; these parameters are concatenated into a shared variational representation used for phenotype prediction and genotype reconstruction. 
 
 The repository contains experiment-specific research scripts. Input data must be obtained separately, and some baseline and analysis programs require local path configuration. A clean-clone end-to-end reproduction has not yet been verified.
 
