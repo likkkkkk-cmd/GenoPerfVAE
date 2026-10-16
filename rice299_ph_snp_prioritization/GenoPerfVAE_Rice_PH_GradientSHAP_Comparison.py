@@ -28,7 +28,7 @@ Put this file next to:
   GenoPerfVAE_Rice_PH_Target_RoundTrip_Validation.py
   GenoPerfVAE_Rice_PH_ObservedGenotype_SNP_Perturbation.py
 
-Usage on Windows (from E:\\VGMP\\Extended Comparison\\PerVAE):
+Usage on Windows (from E:\\VGMP\\Extended Comparison\\GenoPerfVAE):
   pip install captum
   python GenoPerfVAE_Rice_PH_GradientSHAP_Comparison.py --stage all --device cuda
   python GenoPerfVAE_Rice_PH_GradientSHAP_Comparison.py --stage shap --device cuda
@@ -581,7 +581,7 @@ def self_test():
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--stage", choices=["shap", "compare", "all"], default="all")
-    parser.add_argument("--project-dir", type=Path, default=Path(r"E:\VGMP\Extended Comparison\PerVAE"))
+    parser.add_argument("--project-dir", type=Path, default=Path(r"E:\VGMP\Extended Comparison\GenoPerfVAE"))
     parser.add_argument("--roundtrip-script", type=Path)
     parser.add_argument("--perturb-script", type=Path)
     parser.add_argument("--checkpoint", type=Path)
