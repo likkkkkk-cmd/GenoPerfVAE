@@ -9,7 +9,7 @@ pseudomolecules. This script requires MSU6 ``all.con.gz`` (full chromosomes).
 See the official MSU6 README:
 https://rice.uga.edu/pub/data/Eukaryotic_Projects/o_sativa/annotation_dbs/pseudomolecules/version_6.0/README
 
-Windows (from E:\\VGMP\\Extended Comparison\\PerVAE):
+Windows (from E:\\VGMP\\Extended Comparison\\GenoPerfVAE):
     python GenoPerfVAE_Rice_PH_MSU6_MSU7_Coordinate_Audit.py
 
 Optional:
@@ -36,7 +36,7 @@ from pathlib import Path
 from statistics import median
 from urllib.parse import unquote
 
-PROJECT = Path(r"E:\VGMP\Extended Comparison\PerVAE")
+PROJECT = Path(r"E:\VGMP\Extended Comparison\GenoPerfVAE")
 DATA = Path(r"E:\VGMP\Extended Comparison\data")
 PREFIX = "GenoPerfVAE_Rice_PH_MSU6_MSU7_Coordinate_Audit"
 SNPRX = re.compile(r"^S(\d{1,2})_(\d+)$", re.I)
