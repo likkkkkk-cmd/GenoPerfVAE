@@ -30,7 +30,7 @@ from collections import Counter, defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 
-ROOT = Path(r"E:\VGMP\Extended Comparison\PerVAE")
+ROOT = Path(r"E:\VGMP\Extended Comparison\GenoPerfVAE")
 PREFIX = "GenoPerfVAE_Rice_PH_TopN_GO_Enrichment"
 GOSLIM_URL = "https://rice.uga.edu/osa1r7_download/osa1_r7.all_models.GOSlim.txt.gz"
 OBO_URL = "https://purl.obolibrary.org/obo/go/go-basic.obo"
