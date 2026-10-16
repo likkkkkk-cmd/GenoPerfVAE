@@ -24,7 +24,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(r"E:\VGMP\Extended Comparison\PerVAE")
+ROOT = Path(r"E:\VGMP\Extended Comparison\GenoPerfVAE")
 PERTURB = 'GenoPerfVAE_Rice_PH_ObservedGenotype_SNP_Perturbation.py'
 AUDIT = 'GenoPerfVAE_Rice_PH_MSU6_MSU7_Coordinate_Audit.py'
 GO = 'GenoPerfVAE_Rice_PH_TopN_GO_Enrichment.py'
