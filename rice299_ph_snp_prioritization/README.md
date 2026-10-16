@@ -56,7 +56,7 @@ E:\VGMP\Extended Comparison\
 │   ├── MET_crfilt_.90_outliers_removed_for_RRBlup_line_corrected.csv
 │   ├── rice299_PH.csv
 │   └── MET_crfilt_.75_allchrom.hmp.txt
-└── PerVAE\
+└── GenoPerfVAE\
     ├── [the 12 Python scripts listed above]
     ├── all.con.gz
     ├── all.gff3.gz
@@ -93,11 +93,11 @@ E:\VGMP\Extended Comparison\
 
 ### Step 1 — Fit the final PH model
 
-Run from the original `PerVAE` directory:
+Run from the original `GenoPerfVAE` directory:
 
 ```bat
 conda activate pytorch
-cd /d "E:\VGMP\Extended Comparison\PerVAE"
+cd /d "E:\VGMP\Extended Comparison\GenoPerfVAE"
 python GenoPerfVAE_Rice_PH_Final_PostHoc_Train.py --data-dir "E:\VGMP\Extended Comparison\data" --output-dir "results_Rice_PH_Final_PostHoc"
 ```
 
@@ -108,7 +108,7 @@ This is a **single full-data fitted model** for post-hoc interpretation. Use the
 ### Step 2 — Gradient screening and exact perturbation (Top 150)
 
 ```bat
-python GenoPerfVAE_Rice_PH_TopN_Expansion.py --project-dir "E:\VGMP\Extended Comparison\PerVAE" --top-k 150 --stage perturb --device cuda --batch-size 8
+python GenoPerfVAE_Rice_PH_TopN_Expansion.py --project-dir "E:\VGMP\Extended Comparison\GenoPerfVAE" --top-k 150 --stage perturb --device cuda --batch-size 8
 ```
 
 The orchestrator invokes `GenoPerfVAE_Rice_PH_ObservedGenotype_SNP_Perturbation.py`. It evaluates the selected **150 markers** on all aligned samples; it does **not** perform exact perturbation for all 38,796 eligible SNPs.
@@ -141,7 +141,7 @@ Optional sensitivity checks use `--pcs 3` and `--pcs 5`, each in their own outpu
 ### Step 4 — MSU6→MSU7 sequence-based coordinate audit
 
 ```bat
-python GenoPerfVAE_Rice_PH_TopN_Expansion.py --project-dir "E:\VGMP\Extended Comparison\PerVAE" --top-k 150 --stage audit
+python GenoPerfVAE_Rice_PH_TopN_Expansion.py --project-dir "E:\VGMP\Extended Comparison\GenoPerfVAE" --top-k 150 --stage audit
 ```
 
 The orchestrator invokes `GenoPerfVAE_Rice_PH_MSU6_MSU7_Coordinate_Audit.py` and checks the uniqueness/allele compatibility of the candidate mappings. Required outputs are under:
@@ -155,7 +155,7 @@ A nearby gene is a genomic-context hypothesis, not a validated regulatory target
 ### Step 5 — Plant GO Slim overrepresentation and randomizations
 
 ```bat
-python GenoPerfVAE_Rice_PH_TopN_Expansion.py --project-dir "E:\VGMP\Extended Comparison\PerVAE" --top-k 150 --stage go --permutations 2000
+python GenoPerfVAE_Rice_PH_TopN_Expansion.py --project-dir "E:\VGMP\Extended Comparison\GenoPerfVAE" --top-k 150 --stage go --permutations 2000
 ```
 
 The orchestrator invokes `GenoPerfVAE_Rice_PH_TopN_GO_Enrichment.py`. GO candidates/background are mapped by the same MSU6 gene models with a ±5-kb rule, with official MSU7 Plant GO Slim annotations and matched-SNP and chromosome-shift empirical checks. Outputs include:
@@ -171,7 +171,7 @@ results_Rice_PH_Top150_FinalExpansion/03_GOSlim_Enrichment/
 After all prerequisites are available, the orchestrator also supports:
 
 ```bat
-python GenoPerfVAE_Rice_PH_TopN_Expansion.py --project-dir "E:\VGMP\Extended Comparison\PerVAE" --top-k 150 --stage all --device cuda --batch-size 8 --permutations 2000
+python GenoPerfVAE_Rice_PH_TopN_Expansion.py --project-dir "E:\VGMP\Extended Comparison\GenoPerfVAE" --top-k 150 --stage all --device cuda --batch-size 8 --permutations 2000
 ```
 
 This covers **perturb → coordinate audit → GO**; it does **not** run model fitting, GWAS, GradientSHAP, or Figure 9 plotting.
