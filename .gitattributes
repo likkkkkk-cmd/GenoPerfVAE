@@ -1,0 +1,17 @@
+# Keep Python and documentation readable across Windows/Linux.
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.csv text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.xlsx binary
+*.pkl binary
+*.pickle binary
+*.pth binary
+*.pt binary
+*.gz binary

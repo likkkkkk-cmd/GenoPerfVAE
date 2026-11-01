@@ -1,0 +1,81 @@
+# Python caches/build outputs
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# Virtual environments, editor metadata, local settings
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+
+# Locally generated training/analysis results
+results_*/
+**/results_*/
+checkpoints/
+**/checkpoints/
+weights/
+**/weights/
+logs/
+*.log
+*.tmp
+*.partial
+
+# Trained model parameters (can be large)
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+
+# Do not redistribute raw or processed third-party datasets.
+# Local copy may be kept in these directories, but only README.md is tracked.
+/example_data/*
+!/example_data/README.md
+/data/*
+!/data/README.md
+/raw_data/
+/private_data/
+/references/
+
+# Common genomic and processed data files, even if misplaced outside data folders.
+*.pkl
+*.pickle
+*.bed
+*.bim
+*.fam
+*.pgen
+*.pvar
+*.psam
+*.vcf
+*.vcf.gz
+*.hmp
+*.hmp.txt
+*.npy
+*.npz
+*.parquet
+*geno*.csv
+*pheno*.csv
+*_phe_*.txt
+*geno*.txt
+*pheno*.txt
+MET_crfilt_*.txt
+**/all.con.gz
+**/all.gff3.gz
+**/osa1_r7.asm*.gz
+**/osa1_r7.all_models.*.gz
+
+# A .gitignore does not remove files that are already tracked by Git.
+# Review staged files and history before release.

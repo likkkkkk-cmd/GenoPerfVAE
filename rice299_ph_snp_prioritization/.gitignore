@@ -1,0 +1,42 @@
+# Python-generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local environments and secrets
+.env
+.env.*
+.venv/
+venv/
+
+# Private/local or large primary data and model artifacts (review licensing first)
+data/
+*.pth
+*.pt
+*.pkl
+*.pickle
+*.hmp.txt
+*.fa
+*.fasta
+*.fa.gz
+*.fasta.gz
+*.gff
+*.gff3
+*.gff3.gz
+*.con.gz
+*.GOSlim.txt.gz
+
+# Re-generated outputs; selected small reviewed results can be added explicitly
+results_*/
+figure9/
+Figure10/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Original genotype/phenotype input CSVs
+MET_crfilt_*.csv
+rice299_PH.csv

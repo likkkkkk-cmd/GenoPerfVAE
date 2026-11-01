@@ -1,0 +1,10 @@
+# Optional dependencies imported by selected root-level baseline implementations.
+# Requires the common packages above; versions are intentionally not invented.
+-r requirements.txt
+
+lightgbm  # CLCNet feature selection
+xgboost  # XGBoost model
+
+# NOTE: VMGP.py imports a separate local module: `from vmgp_model import VMGP`.
+# That source file was NOT included in the ten uploaded scripts and is not
+# provided by `pip install -r requirements-baselines.txt`.

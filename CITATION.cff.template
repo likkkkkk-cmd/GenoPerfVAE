@@ -1,0 +1,10 @@
+# TEMPLATE ONLY — replace all REPLACE_ME values before renaming to CITATION.cff.
+# The example title is a placeholder, NOT a verified manuscript title.
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated PerfVAE manuscript."
+title: "REPLACE_ME_WITH_FINAL_MANUSCRIPT_TITLE"
+authors:
+  - family-names: "REPLACE_ME"
+    given-names: "REPLACE_ME"
+repository-code: "https://github.com/likkkkkk-cmd/PerfVAE"
+# After acceptance, add DOI, journal, year, and other verified bibliographic fields.
